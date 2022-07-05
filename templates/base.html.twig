@@ -7,10 +7,16 @@
     <meta http-equiv=" X-UA-Compatible
     " content="ie=edge">
     <title>{% block title %}Series!{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+    <link rel="icon" href="{{ asset('img/icon.png') }}">
 </head>
 <body>
+<div class="container">
     <header>
-        <h1>Series!</h1>
+        <h1><a href="{{ path('main_home') }}"><img src="{{ asset('img/logo.svg') }}" alt="Series!"></a></h1>
         {% include('inc/nav.html.twig') %}
     </header>
     <main>
@@ -20,5 +26,6 @@
         {% include('inc/nav.html.twig') %}
         <div>&copy; {{ "now"|date("Y") }} Series!</div>
     </footer>
+</div>
 </body>
 </html>
