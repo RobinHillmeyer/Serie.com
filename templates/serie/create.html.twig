@@ -1,9 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <section>
-        todo: afficher le formulaire
-    </section>
+    <div>
+        {{ form_start(serieForm) }}
+
+        {{ form_widget(serieForm) }}
+
+        <button>Create!</button>
+
+        {{ form_end(serieForm) }}
+    </div>
 {% endblock %}
 
 {% block title %}
